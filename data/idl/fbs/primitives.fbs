@@ -1,0 +1,37 @@
+namespace org.mydotey.codec.benchmark.data.fbs;
+
+enum PEnum: byte {
+    XXXXXX = 0,
+    YYYYYY = 1,
+    ZZZZZZ = 2
+}
+
+struct FixedData {
+    fByte: byte;
+    fShort: short;
+    fInt: int;
+    fLong: long;
+    fFloat: float;
+    fDouble: double;
+    fBool: bool;
+    fEnum: PEnum;
+}
+
+table UnfixedData {
+    fByte: byte;
+    fShort: short;
+    fInt: int;
+    fLong: long;
+    fFloat: float;
+    fDouble: double;
+    fBool: bool;
+    fEnum: PEnum;
+    fString: string;
+    fListByte: [byte];
+    fListInt: [int];
+    fListBool: [byte];
+    fListEnum: [PEnum];
+    fListString: [string];
+    fListFixed: [FixedData];
+    fListUnfixed: [UnfixedData];
+}

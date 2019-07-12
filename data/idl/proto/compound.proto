@@ -1,0 +1,70 @@
+syntax = "proto3";
+option java_multiple_files = true;
+
+import "primitives.proto";
+
+package org.mydotey.codec.benchmark.data.proto;
+
+message MultiStringData {
+    string fString1 = 1;
+    string fString2 = 2;
+    string fString3 = 3;
+    string fString4 = 4;
+    string fString5 = 5;
+    string fString6 = 6;
+    string fString7 = 7;
+    string fString8 = 8;
+    string fString9 = 9;
+    string fString10 = 10;
+} 
+
+message MultiListFixedData {
+    repeated FixedData fList1 = 1;
+    repeated FixedData fList2 = 2;
+    repeated FixedData fList3 = 3;
+    repeated FixedData fList4 = 4;
+    repeated FixedData fList5 = 5;
+    repeated FixedData fList6 = 6;
+    repeated FixedData fList7 = 7;
+    repeated FixedData fList8 = 8;
+    repeated FixedData fList9 = 9;
+    repeated FixedData fList10 = 10;
+}
+
+message MultiListUnfixedData {
+    repeated UnfixedData fList1 = 1;
+    repeated UnfixedData fList2 = 2;
+    repeated UnfixedData fList3 = 3;
+    repeated UnfixedData fList4 = 4;
+    repeated UnfixedData fList5 = 5;
+    repeated UnfixedData fList6 = 6;
+    repeated UnfixedData fList7 = 7;
+    repeated UnfixedData fList8 = 8;
+    repeated UnfixedData fList9 = 9;
+    repeated UnfixedData fList10 = 10;
+}
+
+message NestedFixedData {
+    FixedData fFixed = 1;
+    NestedFixedData fNested = 2;
+}
+
+message NestedUnfixedData {
+    UnfixedData fUnfixed = 1;
+    NestedUnfixedData fNested = 2;
+}
+
+message NestedMultiStringData {
+    MultiStringData fMultiString = 1;
+    MultiStringData fNested = 2;
+}
+
+message NestedMultiListFixedData {
+    MultiListFixedData fMultiList = 1;
+    NestedMultiListFixedData fNested = 2;
+}
+
+message NestedMultiListUnfixedData {
+    MultiListUnfixedData fMultiList = 1;
+    NestedMultiListUnfixedData fNested = 2;
+}

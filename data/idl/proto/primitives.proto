@@ -1,0 +1,40 @@
+syntax = "proto3";
+option java_multiple_files = true;
+
+package org.mydotey.codec.benchmark.data.proto;
+
+enum PEnum {
+    XXXXXX = 0;
+    YYYYYY = 1;
+    ZZZZZZ = 2;
+}
+
+message FixedData {
+    int32 fByte = 1;
+    sint32 fShort = 2;
+    sint32 fInt = 3;
+    sint64 fLong = 4;
+    float fFloat = 5;
+    double fDouble = 6;
+    bool fBool = 7;
+    PEnum fEnum = 8;
+}
+
+message UnfixedData {
+    int32 fByte = 1;
+    sint32 fShort = 2;
+    sint32 fInt = 3;
+    sint64 fLong = 4;
+    float fFloat = 5;
+    double fDouble = 6;
+    bool fBool = 7;
+    PEnum fEnum = 8;
+    string fString = 9;
+    bytes fListByte = 10;
+    repeated sint32 fListInt = 11;
+    repeated bool fListBool = 12;
+    repeated PEnum fListEnum = 13;
+    repeated string fListString = 14;
+    repeated FixedData fListFixed = 15;
+    repeated UnfixedData fListUnfixed = 16;
+}

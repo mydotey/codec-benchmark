@@ -1,0 +1,68 @@
+
+include "primitives.fbs";
+
+namespace org.mydotey.codec.benchmark.data.fbs;
+
+table MultiStringData {
+    fString1: string;
+    fString2: string;
+    fString3: string;
+    fString4: string;
+    fString5: string;
+    fString6: string;
+    fString7: string;
+    fString8: string;
+    fString9: string;
+    fString10: string;
+} 
+
+table MultiListFixedData {
+    fList1: [FixedData];
+    fList2: [FixedData];
+    fList3: [FixedData];
+    fList4: [FixedData];
+    fList5: [FixedData];
+    fList6: [FixedData];
+    fList7: [FixedData];
+    fList8: [FixedData];
+    fList9: [FixedData];
+    fList10: [FixedData];
+}
+
+table MultiListUnfixedData {
+    fList1: [UnfixedData];
+    fList2: [UnfixedData];
+    fList3: [UnfixedData];
+    fList4: [UnfixedData];
+    fList5: [UnfixedData];
+    fList6: [UnfixedData];
+    fList7: [UnfixedData];
+    fList8: [UnfixedData];
+    fList9: [UnfixedData];
+    fList10: [UnfixedData];
+}
+
+table NestedFixedData {
+    fFixed: FixedData;
+    fNested: NestedFixedData;
+}
+
+table NestedUnfixedData {
+    fUnfixed: UnfixedData;
+    fNested: NestedUnfixedData;
+}
+
+table NestedMultiStringData {
+    fMultiString: MultiStringData;
+    fNested: NestedMultiStringData;
+}
+
+table NestedMultiListFixedData {
+    fMultiList: MultiListFixedData;
+    fNested: NestedMultiListFixedData;
+}
+
+table NestedMultiListUnfixedData {
+    fMultiList: MultiListUnfixedData;
+    fNested: NestedMultiListUnfixedData;
+}
